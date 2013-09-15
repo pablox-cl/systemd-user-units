@@ -6,10 +6,10 @@ means an expert for this matter. Right now my system works and these units get
 loaded, but since the support for upstream is inexistent (yet &mdash;I hope&mdash;),
 there's not too much you can do about it.
 
-I've learn everything from [http://pbrisbin.com/posts/systemd-user][pbrisbin
-excellent article] and of course, the awesome [https://wiki.archlinux.org/index.php/Systemd/User][Arch Linux Wiki].
+I've learn everything from [pbrisbin excellent article](http://pbrisbin.com/posts/systemd-user)
+and of course, the awesome [Arch Linux Wiki](https://wiki.archlinux.org/index.php/Systemd/User).
 
-To use this units, you **need** the [https://github.com/sofar/xorg-launch-helper][xorg-launch-helper].
+To use this units, you **need** the [xorg-launch-helper](https://github.com/sofar/xorg-launch-helper).
 
 Structure and how-to (sort of)
 ------------------------------
@@ -21,6 +21,7 @@ that since systemd can be a little picky about it.
 
     $ systemctl --user enable wm.target
     ln -s '/home/pablo/.config/systemd/user/wm.target' '/home/pablo/.config/systemd/user/default.target'
+    
     $ systemctl --user enable xmonad@:0
     ln -s '/home/pablo/.config/systemd/user/xmonad@.service' '/home/pablo/.config/systemd/user/wm.target.wants/xmonad@:0.service'
 
