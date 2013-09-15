@@ -1,0 +1,10 @@
+[Unit]
+Description=Keep numlock on
+After=xorg.target
+
+[Service]
+ExecStart=/usr/bin/numlockx
+Environment=DISPLAY=%i
+
+[Install]
+WantedBy=startup.target

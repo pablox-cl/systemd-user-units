@@ -1,0 +1,16 @@
+[Unit]
+Description=xmonad
+Before=startup.target
+After=xorg.target
+Requires=xorg.target
+
+[Service]
+#Environment=/home/pablo/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin
+ExecStart=/usr/bin/xmonad
+Environment=DISPLAY=%i
+#Environment=LANG=es_CL.utf-8 LC_MESSAGES=C LC_COLLATE=C
+#Restart=always
+#RestartSec=10
+
+[Install]
+WantedBy=wm.target

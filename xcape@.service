@@ -1,0 +1,10 @@
+[Unit]
+Description=Run xcape
+After=xorg.target
+
+[Service]
+ExecStart=/usr/bin/xcape
+Environment=DISPLAY=%i
+
+[Install]
+WantedBy=startup.target

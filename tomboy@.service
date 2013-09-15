@@ -1,0 +1,10 @@
+[Unit]
+Description=Tomboy
+After=xorg.target
+
+[Service]
+ExecStart=/usr/bin/tomboy
+Environment=DISPLAY=%i
+
+[Install]
+WantedBy=startup.target

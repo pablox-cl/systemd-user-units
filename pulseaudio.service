@@ -1,0 +1,13 @@
+[Unit]
+Description=Pulse Audio Server
+Before=sound.target
+Requires=dbus.socket
+
+[Service]
+Type=forking
+#BusName=org.pulseaudio.Server
+ExecStart=/usr/bin/pulseaudio --start
+ExecStop=/usr/bin/pulseaudio --kill
+
+[Install]
+WantedBy=startup.target

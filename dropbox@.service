@@ -1,0 +1,11 @@
+[Unit]
+Description=Dropbox
+After=xorg.target
+
+[Service]
+ExecStart=/home/pablo/.dropbox-dist/dropboxd
+ExecReload=/bin/kill -HUP $MAINPID
+Environment=DISPLAY=%i
+
+[Install]
+WantedBy=startup.target

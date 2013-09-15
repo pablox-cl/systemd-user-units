@@ -1,0 +1,10 @@
+[Unit]
+Description=Clipboard manager
+After=xorg.target
+
+[Service]
+ExecStart=/usr/bin/parcellite
+Environment=DISPLAY=%i
+
+[Install]
+WantedBy=startup.target

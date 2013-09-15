@@ -1,0 +1,10 @@
+[Unit]
+Description=Thunar file manager
+After=xorg.target
+
+[Service]
+ExecStart=/usr/bin/thunar --daemon
+Environment=DISPLAY=%i
+
+[Install]
+WantedBy=startup.target

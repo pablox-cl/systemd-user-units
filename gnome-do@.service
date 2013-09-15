@@ -1,0 +1,11 @@
+[Unit]
+Description=Gnome-Do
+After=xorg.target
+
+[Service]
+#ExecStart=/usr/bin/dbus-launch gnome-do
+ExecStart=/usr/bin/gnome-do
+Environment=DISPLAY=%i
+
+[Install]
+WantedBy=startup.target
